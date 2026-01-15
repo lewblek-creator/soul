@@ -1,6 +1,5 @@
 package ru.yourname.soulsword.chat;
 
-import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.server.MinecraftServer;
 import ru.yourname.soulsword.progression.AwakeningStage;
@@ -48,10 +47,7 @@ public class SoulDialogueOtherPlayers {
         String key = pool.get(RANDOM.nextInt(pool.size()));
         EntityPlayer target = players.get(RANDOM.nextInt(players.size()));
 
-        String line = I18n.format(key)
-                .replace("%player%", target.getName());
-
-        SoulSpeaker.speak(owner, line, false);
+        SoulSpeaker.speak(owner, key, false, target.getName());
     }
 }
 

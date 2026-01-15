@@ -107,15 +107,19 @@ public enum AwakeningStage {
     }
 
     public boolean hasMeleeVampirism() {
-        return this == HUNGRY
+        return this == STIRRING
+                || this == AWAKENING
+                || this == HUNGRY
                 || this == INSATIABLE
                 || this == DOMINANT
+                || this == BREAKING
+                || this == ACKNOWLEDGING
                 || this == ACCEPTING
                 || this == MASTER;
     }
 
     public boolean hasSoulWavePassive() {
-        return this == INSATIABLE;
+        return this == HUNGRY;
     }
 
     public boolean hasSoulWaveActive() {
@@ -142,11 +146,15 @@ public enum AwakeningStage {
 
     public float getMeleeVampirism() {
         switch (this) {
-            case HUNGRY:     return 0.05f;
-            case INSATIABLE: return 0.10f;
-            case DOMINANT:   return 0.18f;
-            case ACCEPTING:  return 0.25f;
-            case MASTER:     return 0.40f;
+            case STIRRING:      return 0.03f;
+            case AWAKENING:     return 0.045f;
+            case HUNGRY:        return 0.06f;
+            case INSATIABLE:    return 0.075f;
+            case DOMINANT:      return 0.09f;
+            case BREAKING:      return 0.105f;
+            case ACKNOWLEDGING: return 0.12f;
+            case ACCEPTING:     return 0.135f;
+            case MASTER:        return 0.15f;
             default:         return 0.0f;
         }
     }

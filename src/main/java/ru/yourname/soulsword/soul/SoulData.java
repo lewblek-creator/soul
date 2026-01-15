@@ -32,6 +32,29 @@ public class SoulData {
     }
 
     // =========================
+    // SOULS (ALIAS)
+    // =========================
+
+    public static int getSouls(ItemStack stack) {
+        return getKills(stack);
+    }
+
+    public static void addSoul(ItemStack stack) {
+        addKill(stack);
+    }
+
+    public static void setSouls(ItemStack stack, int souls) {
+        tag(stack).setInteger("Kills", Math.max(0, souls));
+    }
+
+    public static boolean consumeSouls(ItemStack stack, int amount) {
+        int current = getSouls(stack);
+        if (current < amount) return false;
+        setSouls(stack, current - amount);
+        return true;
+    }
+
+    // =========================
     // KILL STREAK
     // =========================
 
@@ -68,12 +91,60 @@ public class SoulData {
         tag(stack).setFloat("BonusDamage", getBonusDamage(stack) + amount);
     }
 
+    public static void setBonusDamage(ItemStack stack, float value) {
+        tag(stack).setFloat("BonusDamage", value);
+    }
+
+    // =========================
+    // COOLDOWNS / TIMERS (TICKS)
+    // =========================
+
+    public static long getLastHitTime(ItemStack stack) {
+        return tag(stack).getLong("LastHitTime");
+    }
+
+    public static void setLastHitTime(ItemStack stack, long time) {
+        tag(stack).setLong("LastHitTime", time);
+    }
+
+    public static long getLastShieldDecayTime(ItemStack stack) {
+        return tag(stack).getLong("LastShieldDecayTime");
+    }
+
+    public static void setLastShieldDecayTime(ItemStack stack, long time) {
+        tag(stack).setLong("LastShieldDecayTime", time);
+    }
+
+    public static long getLastShadowStepTime(ItemStack stack) {
+        return tag(stack).getLong("LastShadowStepTime");
+    }
+
+    public static void setLastShadowStepTime(ItemStack stack, long time) {
+        tag(stack).setLong("LastShadowStepTime", time);
+    }
+
+    public static long getLastImmortalTime(ItemStack stack) {
+        return tag(stack).getLong("LastImmortalTime");
+    }
+
+    public static void setLastImmortalTime(ItemStack stack, long time) {
+        tag(stack).setLong("LastImmortalTime", time);
+    }
+
+    public static long getLastSoulRendTime(ItemStack stack) {
+        return tag(stack).getLong("LastSoulRendTime");
+    }
+
+    public static void setLastSoulRendTime(ItemStack stack, long time) {
+        tag(stack).setLong("LastSoulRendTime", time);
+    }
+
     // =========================
     // AWAKENING (КАНОН)
     // =========================
 
     public static AwakeningStage getAwakeningStage(ItemStack stack) {
-        return AwakeningStage.byKills(getKills(stack));
+        return AwakeningStage.byKills(getSouls(stack));
     }
 
     /**

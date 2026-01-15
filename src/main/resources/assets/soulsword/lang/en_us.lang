@@ -1,0 +1,17 @@
+item.soulsword.soul_sword=Soul Sword
+
+tooltip.soulsword.stage=Stage: %s/10
+tooltip.soulsword.souls=Souls: %s / %s
+tooltip.soulsword.souls.max=Souls: %s / MAX
+tooltip.soulsword.bonus_damage=Bonus damage: +%.2f
+tooltip.soulsword.vampirism=Vampirism: %.1f%%
+tooltip.soulsword.wave.passive=Wave: passive (50%)
+tooltip.soulsword.wave.active=Wave: active (50%)
+tooltip.soulsword.wave.active_strong=Wave: active (100%)
+tooltip.soulsword.blood_shield=Blood shield: up to %s hearts
+
+hud.soulsword.title=Soul Sword
+hud.soulsword.stage=Stage: %s/10
+hud.soulsword.souls=Souls: %s / %s
+hud.soulsword.souls.max=Souls: %s / MAX
+hud.soulsword.damage=Bonus damage: +%.2f

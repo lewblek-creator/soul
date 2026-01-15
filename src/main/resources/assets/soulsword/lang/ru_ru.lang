@@ -1,22 +1,26 @@
 item.soulsword.soul_sword=Меч Душ
 
-tooltip.soulsword.stage=Стадия
-tooltip.soulsword.kills=Убийства
-tooltip.soulsword.soul_power=Сила душ
-tooltip.soulsword.bonus_damage=Бонус к урону
-tooltip.soulsword.next_stage=До следующей стадии
+tooltip.soulsword.stage=Стадия: %s/10
+tooltip.soulsword.souls=Души: %s / %s
+tooltip.soulsword.souls.max=Души: %s / MAX
+tooltip.soulsword.bonus_damage=Бонус урона: +%.2f
+tooltip.soulsword.vampirism=Вампиризм: %.1f%%
+tooltip.soulsword.wave.passive=Волна: пассивная (50%)
+tooltip.soulsword.wave.active=Волна: активная (50%)
+tooltip.soulsword.wave.active_strong=Волна: активная (100%)
+tooltip.soulsword.blood_shield=Кровавый щит: до %s сердец
 
 tooltip.soulsword.stage.dull=Тусклый клинок
 tooltip.soulsword.stage.awakened=Пробуждённый клинок
 tooltip.soulsword.stage.saturated=Насыщенный клинок
 hud.soulsword.title=Soul Sword
-hud.soulsword.stage=Пробуждение: %s
+hud.soulsword.stage=Стадия: %s/10
 hud.soulsword.souls=Души: %s / %s
 hud.soulsword.souls.max=Души: %s / ∞
 hud.soulsword.damage=Бонус урона: +%.2f
 # ===== DIRECT DIALOGUE =====
 
-soul.dialogue.direct.early.1=%PLAYER_SELF%. Ты слаб.
+soul.dialogue.direct.early.1=%s. Ты слаб.
 soul.dialogue.direct.early.2=Ты медленный.
 soul.dialogue.direct.early.3=Ты не он.
 soul.dialogue.direct.early.4=Ты колеблешься.
@@ -24,7 +28,7 @@ soul.dialogue.direct.early.5=Он бы уже ударил.
 
 soul.dialogue.direct.mid.1=Ты учишься.
 soul.dialogue.direct.mid.2=Ты злишься. Хорошо.
-soul.dialogue.direct.mid.3=%PLAYER_SELF% может когда-нибудь… а хотя забудь.
+soul.dialogue.direct.mid.3=%s может когда-нибудь… а хотя забудь.
 soul.dialogue.direct.mid.4=Ты начал понимать.
 soul.dialogue.direct.mid.5=Так уже лучше.
 
@@ -35,17 +39,17 @@ soul.dialogue.direct.late.4=Ты держишь меня правильно.
 soul.dialogue.direct.late.5=Я не ошибся в тебе.
 # ===== OTHER PLAYERS DIALOGUE =====
 
-soul.dialogue.other.base.1=%player%, ты дрожишь. Почему?
-soul.dialogue.other.base.2=%player%, ты слишком слаб для этого мира.
-soul.dialogue.other.base.3=%player%, смотри. Учись. Умри.
-soul.dialogue.other.base.4=%player%, если он упадёт — ты следующий.
-soul.dialogue.other.base.5=%player%, я уже видел таких, как ты.
-soul.dialogue.other.base.6=%player%, ты не запомнишься.
-soul.dialogue.other.base.7=%player%, этот мир переживёт и твою смерть.
+soul.dialogue.other.base.1=%s, ты дрожишь. Почему?
+soul.dialogue.other.base.2=%s, ты слишком слаб для этого мира.
+soul.dialogue.other.base.3=%s, смотри. Учись. Умри.
+soul.dialogue.other.base.4=%s, если он упадёт — ты следующий.
+soul.dialogue.other.base.5=%s, я уже видел таких, как ты.
+soul.dialogue.other.base.6=%s, ты не запомнишься.
+soul.dialogue.other.base.7=%s, этот мир переживёт и твою смерть.
 
-soul.dialogue.other.late.1=Хозяин, %player% выглядит хрупким.
-soul.dialogue.other.late.2=%player%, ты стоишь слишком близко.
-soul.dialogue.other.late.3=%player%, мне интересно, сколько ты продержишься.
+soul.dialogue.other.late.1=Хозяин, %s выглядит хрупким.
+soul.dialogue.other.late.2=%s, ты стоишь слишком близко.
+soul.dialogue.other.late.3=%s, мне интересно, сколько ты продержишься.
 # ===== AWAKENING: SLEEPING =====
 soul.awakening.sleeping.1=Я даже не проснулся полностью… а ты уже меня трогаешь.
 soul.awakening.sleeping.2=Он держал меня увереннее.
@@ -63,7 +67,7 @@ soul.awakening.awakening.3=Посмотрим, сколько ты протян�
 
 # ===== HUNGRY =====
 soul.awakening.hungry.1=Мало. Всегда мало. Он кормил меня лучше.
-soul.awakening.hungry.2=%player% что скажешь? Вроде как он стал самую малость сильнее.
+soul.awakening.hungry.2=%s что скажешь? Вроде как он стал самую малость сильнее.
 soul.awakening.hungry.3=Ты жадный до жизни. Это хорошо.
 
 # ===== INSATIABLE =====
@@ -94,7 +98,7 @@ soul.awakening.accepting.3=Теперь уж до конца.
 # ===== MASTER =====
 soul.awakening.master.1=Хозяин… Я выбираю тебя. Мы закончим то, что он начал.
 soul.awakening.master.2=Хозяин… Кхм… как закончим, может уничтожим мир?
-soul.awakening.master.3=Кхм кхм, слушай хозяин, а нам точно нужен %player%?
+soul.awakening.master.3=Кхм кхм, слушай хозяин, а нам точно нужен %s?
 # ===== HUNGER DIALOGUE =====
 
 soul.dialogue.hunger.light.1=Ты чувствуешь это?.. Мне мало.

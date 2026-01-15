@@ -1,6 +1,5 @@
 package ru.yourname.soulsword.chat;
 
-import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.server.MinecraftServer;
 import ru.yourname.soulsword.progression.AwakeningStage;
@@ -13,6 +12,9 @@ public class SoulDialogueAwakening {
 
     private static final Map<AwakeningStage, List<String>> PHRASES =
             new EnumMap<>(AwakeningStage.class);
+    private static final Set<String> OTHER_PLAYER_KEYS = new HashSet<>(
+            Arrays.asList("soul.awakening.hungry.2", "soul.awakening.master.3")
+    );
 
     static {
 
@@ -42,35 +44,23 @@ public class SoulDialogueAwakening {
         if (list == null || list.isEmpty()) return;
 
         String key = list.get(RANDOM.nextInt(list.size()));
-        String raw = I18n.format(key);
-        String resolved = resolvePlayers(raw, owner);
-
-        if (resolved == null) return;
-        SoulSpeaker.speak(owner, resolved, false);
+        if (OTHER_PLAYER_KEYS.contains(key)) {
+            EntityPlayer target = findOtherPlayer(owner);
+            if (target == null) return;
+            SoulSpeaker.speak(owner, key, false, target.getName());
+        } else {
+            SoulSpeaker.speak(owner, key, false);
+        }
     }
 
-    private static String resolvePlayers(String text, EntityPlayer owner) {
+    private static EntityPlayer findOtherPlayer(EntityPlayer owner) {
+        MinecraftServer server = owner.world.getMinecraftServer();
+        if (server == null) return null;
 
-        String result = text;
+        List<EntityPlayer> players = new ArrayList<>(server.getPlayerList().getPlayers());
+        players.remove(owner);
+        if (players.isEmpty()) return null;
 
-        if (result.contains("%PLAYER_SELF%")) {
-            result = result.replace("%PLAYER_SELF%", owner.getName());
-        }
-
-        if (result.contains("%player%")) {
-
-            MinecraftServer server = owner.world.getMinecraftServer();
-            if (server == null) return null;
-
-            List<EntityPlayer> players = new ArrayList<>(server.getPlayerList().getPlayers());
-            players.remove(owner);
-
-            if (players.isEmpty()) return null;
-
-            EntityPlayer target = players.get(RANDOM.nextInt(players.size()));
-            result = result.replace("%player%", target.getName());
-        }
-
-        return result;
+        return players.get(RANDOM.nextInt(players.size()));
     }
 }

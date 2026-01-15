@@ -37,7 +37,7 @@ public class PacketSoulWave implements IMessage {
                 // Soul Wave АКТИВНАЯ только с 6 стадии
                 if (!stage.hasSoulWaveActive()) return;
 
-                SoulWaveAttack.tryWave(player);
+                SoulWaveAttack.tryWave(player, true);
             });
 
             return null;
