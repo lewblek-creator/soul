@@ -43,12 +43,11 @@ public class SoulTooltipIcons {
 
         AwakeningStage stage = SoulData.getAwakeningStage(stack);
         int stageId = SoulData.getAwakeningStageId(stack);
-        int stageNumber = stageId + 1;
 
         List<ResourceLocation> icons = new ArrayList<>();
         icons.add(ICON_STAGE);
         icons.add(ICON_SOUL);
-        icons.add(null);
+        icons.add(ICON_VAMPIRISM);
 
         if (stage.getMeleeVampirism() > 0f) {
             icons.add(ICON_VAMPIRISM);
@@ -60,6 +59,7 @@ public class SoulTooltipIcons {
         }
 
         if (stageNumber >= 5) {
+        if (stageId >= 4) {
             icons.add(ICON_BLOOD_SHIELD);
         }
 

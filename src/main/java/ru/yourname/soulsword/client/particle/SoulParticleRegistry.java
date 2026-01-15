@@ -1,6 +1,7 @@
 package ru.yourname.soulsword.client.particle;
 
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
+import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -23,6 +24,7 @@ public class SoulParticleRegistry {
 
     @SubscribeEvent
     public static void onTextureStitchPre(TextureStitchEvent.Pre event) {
+        if (!TextureMap.LOCATION_PARTICLES_TEXTURE.equals(event.getMap().getTextureLocation())) return;
         event.getMap().registerSprite(BLEEDING);
         event.getMap().registerSprite(MARK);
         event.getMap().registerSprite(FEAR_AURA);
@@ -31,6 +33,8 @@ public class SoulParticleRegistry {
 
     @SubscribeEvent
     public static void onTextureStitchPost(TextureStitchEvent.Post event) {
+        if (!TextureMap.LOCATION_PARTICLES_TEXTURE.equals(event.getMap().getTextureLocation())) return;
+
         bleedingSprite = event.getMap().getAtlasSprite(BLEEDING.toString());
         markSprite = event.getMap().getAtlasSprite(MARK.toString());
         fearAuraSprite = event.getMap().getAtlasSprite(FEAR_AURA.toString());
