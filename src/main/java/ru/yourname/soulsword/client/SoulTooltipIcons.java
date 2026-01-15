@@ -58,6 +58,7 @@ public class SoulTooltipIcons {
             icons.add(waveIcon);
         }
 
+        if (stageNumber >= 5) {
         if (stageId >= 4) {
             icons.add(ICON_BLOOD_SHIELD);
         }
