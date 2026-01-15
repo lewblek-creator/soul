@@ -4,15 +4,15 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.DamageSource;
+import net.minecraft.init.MobEffects;
+import net.minecraft.potion.PotionEffect;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import ru.yourname.soulsword.SoulSwordMod;
 import ru.yourname.soulsword.chat.SoulDialogueKillStreak;
 import ru.yourname.soulsword.chat.SoulDialogueQueue;
-import ru.yourname.soulsword.combat.SoulCombatLogic;
-import ru.yourname.soulsword.combat.SoulWaveAttack;
+import ru.yourname.soulsword.combat.SoulCombatStatus;
 import ru.yourname.soulsword.item.ItemSoulSword;
 import ru.yourname.soulsword.soul.SoulData;
 
@@ -33,18 +33,24 @@ public class KillEvents {
         if (stack.isEmpty() || !(stack.getItem() instanceof ItemSoulSword)) return;
 
         EntityLivingBase mob = (EntityLivingBase) event.getEntity();
-        DamageSource source = event.getSource();
+        long now = player.world.getTotalWorldTime();
+        int stageId = SoulData.getAwakeningStageId(stack);
 
         // ===== COMBAT META =====
         SoulData.setLastCombatTime(stack, System.currentTimeMillis());
 
         // ===== SOUL PROGRESSION =====
         // КИЛЛ засчитывается ВСЕГДА
-        SoulData.addKill(stack);
+        SoulData.addSoul(stack);
 
-        // Рост урона ТОЛЬКО от melee
-        if (source != SoulWaveAttack.SOUL_WAVE_DAMAGE) {
-            SoulCombatLogic.onMobKilled(stack, mob);
+        if (stageId >= 2) {
+            player.addPotionEffect(new PotionEffect(MobEffects.SPEED, 100, 0));
+            player.getFoodStats().addStats(1, 0.0f);
+        }
+
+        if (stageId >= 6 && SoulCombatStatus.isMarkedBy(mob, player, now)) {
+            player.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 60, 0));
+            SoulData.addSoul(stack);
         }
 
         // ===== KILL STREAK =====

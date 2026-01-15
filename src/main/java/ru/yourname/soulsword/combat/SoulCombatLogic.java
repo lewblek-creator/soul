@@ -14,9 +14,22 @@ public class SoulCombatLogic {
     // =========================
     // DAMAGE GROWTH
     // =========================
-    public static void onMobKilled(ItemStack stack, EntityLivingBase mob) {
-        float hp = mob.getMaxHealth();
-        SoulData.addBonusDamage(stack, hp * 0.009f);
+    private static final float MAX_BONUS_DAMAGE = 20.0f;
+    private static final float MAX_GROWTH_PER_HIT = 0.5f;
+    private static final float DAMAGE_GROWTH_PER_DAMAGE = 0.01f;
+    private static final float MAX_HP_FOR_SCALING = 100.0f;
+
+    public static void applyDamageGrowth(ItemStack stack, EntityLivingBase mob, float damage) {
+        if (damage <= 0) return;
+
+        float hpFactor = Math.min(mob.getMaxHealth(), MAX_HP_FOR_SCALING) / MAX_HP_FOR_SCALING;
+        float growth = damage * DAMAGE_GROWTH_PER_DAMAGE * (1.0f + hpFactor);
+        growth = Math.min(growth, MAX_GROWTH_PER_HIT);
+
+        float current = SoulData.getBonusDamage(stack);
+        if (current >= MAX_BONUS_DAMAGE) return;
+
+        SoulData.setBonusDamage(stack, Math.min(current + growth, MAX_BONUS_DAMAGE));
     }
 
     // =========================

@@ -1,6 +1,5 @@
 package ru.yourname.soulsword.chat;
 
-import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -14,20 +13,22 @@ public class SoulDialogueQueue {
 
     private static class QueuedLine {
         EntityPlayer player;
-        String text;
+        String key;
+        Object[] args;
         int delay;
 
-        QueuedLine(EntityPlayer player, String text, int delay) {
+        QueuedLine(EntityPlayer player, String key, int delay, Object[] args) {
             this.player = player;
-            this.text = text;
+            this.key = key;
             this.delay = delay;
+            this.args = args;
         }
     }
 
     private static final Queue<QueuedLine> QUEUE = new LinkedList<>();
 
-    public static void enqueue(EntityPlayer player, String text, int delayTicks) {
-        QUEUE.add(new QueuedLine(player, text, delayTicks));
+    public static void enqueue(EntityPlayer player, String key, int delayTicks, Object... args) {
+        QUEUE.add(new QueuedLine(player, key, delayTicks, args));
     }
 
     @SubscribeEvent
@@ -40,12 +41,7 @@ public class SoulDialogueQueue {
         line.delay--;
 
         if (line.delay <= 0) {
-
-            String resolved = I18n.hasKey(line.text)
-                    ? I18n.format(line.text)
-                    : line.text;
-
-            SoulSpeaker.speak(line.player, resolved, false);
+            SoulSpeaker.speak(line.player, line.key, false, line.args);
             QUEUE.poll();
         }
     }

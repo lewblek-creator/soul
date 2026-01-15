@@ -1,6 +1,5 @@
 package ru.yourname.soulsword.chat;
 
-import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import ru.yourname.soulsword.soul.SoulData;
@@ -26,8 +25,6 @@ public class SoulDialogueFirstTouch {
         SoulData.markFirstHeld(stack);
 
         String key = KEYS.get(RANDOM.nextInt(KEYS.size()));
-        String line = I18n.format(key);
-
-        SoulSpeaker.speak(player, line, false);
+        SoulSpeaker.speak(player, key, false);
     }
 }
