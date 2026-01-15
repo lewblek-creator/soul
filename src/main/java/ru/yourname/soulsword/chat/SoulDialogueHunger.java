@@ -1,6 +1,5 @@
 package ru.yourname.soulsword.chat;
 
-import net.minecraft.client.resources.I18n;
 import ru.yourname.soulsword.soul.HungerStage;
 
 import java.util.*;
@@ -30,8 +29,7 @@ public class SoulDialogueHunger {
         List<String> pool = POOLS.get(stage);
         if (pool == null || pool.isEmpty()) return null;
 
-        String key = pool.get(RANDOM.nextInt(pool.size()));
-        return I18n.format(key);
+        return pool.get(RANDOM.nextInt(pool.size()));
     }
 }
 
