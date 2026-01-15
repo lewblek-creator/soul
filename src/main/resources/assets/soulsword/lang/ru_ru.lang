@@ -1,0 +1,207 @@
+item.soulsword.soul_sword=Меч Душ
+
+tooltip.soulsword.stage=Стадия
+tooltip.soulsword.kills=Убийства
+tooltip.soulsword.soul_power=Сила душ
+tooltip.soulsword.bonus_damage=Бонус к урону
+tooltip.soulsword.next_stage=До следующей стадии
+
+tooltip.soulsword.stage.dull=Тусклый клинок
+tooltip.soulsword.stage.awakened=Пробуждённый клинок
+tooltip.soulsword.stage.saturated=Насыщенный клинок
+hud.soulsword.title=Soul Sword
+hud.soulsword.stage=Пробуждение: %s
+hud.soulsword.souls=Души: %s / %s
+hud.soulsword.souls.max=Души: %s / ∞
+hud.soulsword.damage=Бонус урона: +%.2f
+# ===== DIRECT DIALOGUE =====
+
+soul.dialogue.direct.early.1=%PLAYER_SELF%. Ты слаб.
+soul.dialogue.direct.early.2=Ты медленный.
+soul.dialogue.direct.early.3=Ты не он.
+soul.dialogue.direct.early.4=Ты колеблешься.
+soul.dialogue.direct.early.5=Он бы уже ударил.
+
+soul.dialogue.direct.mid.1=Ты учишься.
+soul.dialogue.direct.mid.2=Ты злишься. Хорошо.
+soul.dialogue.direct.mid.3=%PLAYER_SELF% может когда-нибудь… а хотя забудь.
+soul.dialogue.direct.mid.4=Ты начал понимать.
+soul.dialogue.direct.mid.5=Так уже лучше.
+
+soul.dialogue.direct.late.1=Хозяин, там ещё живые.
+soul.dialogue.direct.late.2=Мы почти закончили.
+soul.dialogue.direct.late.3=Я с тобой.
+soul.dialogue.direct.late.4=Ты держишь меня правильно.
+soul.dialogue.direct.late.5=Я не ошибся в тебе.
+# ===== OTHER PLAYERS DIALOGUE =====
+
+soul.dialogue.other.base.1=%player%, ты дрожишь. Почему?
+soul.dialogue.other.base.2=%player%, ты слишком слаб для этого мира.
+soul.dialogue.other.base.3=%player%, смотри. Учись. Умри.
+soul.dialogue.other.base.4=%player%, если он упадёт — ты следующий.
+soul.dialogue.other.base.5=%player%, я уже видел таких, как ты.
+soul.dialogue.other.base.6=%player%, ты не запомнишься.
+soul.dialogue.other.base.7=%player%, этот мир переживёт и твою смерть.
+
+soul.dialogue.other.late.1=Хозяин, %player% выглядит хрупким.
+soul.dialogue.other.late.2=%player%, ты стоишь слишком близко.
+soul.dialogue.other.late.3=%player%, мне интересно, сколько ты продержишься.
+# ===== AWAKENING: SLEEPING =====
+soul.awakening.sleeping.1=Я даже не проснулся полностью… а ты уже меня трогаешь.
+soul.awakening.sleeping.2=Он держал меня увереннее.
+soul.awakening.sleeping.3=Не привыкай. Ты — временный.
+
+# ===== STIRRING =====
+soul.awakening.stirring.1=Хм… ты заставил меня открыть глаз.
+soul.awakening.stirring.2=Прошлый хозяин делал это быстрее. Но ты хотя бы стараешься.
+soul.awakening.stirring.3=Уже лучше чем ребенок с палкой.
+
+# ===== AWAKENING =====
+soul.awakening.awakening.1=Я начинаю чувствовать.
+soul.awakening.awakening.2=Ты хуже него. Пока что.
+soul.awakening.awakening.3=Посмотрим, сколько ты протянешь.
+
+# ===== HUNGRY =====
+soul.awakening.hungry.1=Мало. Всегда мало. Он кормил меня лучше.
+soul.awakening.hungry.2=%player% что скажешь? Вроде как он стал самую малость сильнее.
+soul.awakening.hungry.3=Ты жадный до жизни. Это хорошо.
+
+# ===== INSATIABLE =====
+soul.awakening.insatiable.1=ДА. ВОТ ТЕПЕРЬ.
+soul.awakening.insatiable.2=Ха… почти как раньше… Почти.
+soul.awakening.insatiable.3=Ты уже чуть лучше чем нормально.
+
+# ===== DOMINATING =====
+soul.awakening.dominating.1=Я снова ощущаю страх мира.
+soul.awakening.dominating.2=Он делал это молча.
+soul.awakening.dominating.3=Ты — шумный. Но эффективный.
+
+# ===== BREAKING =====
+soul.awakening.breaking.1=Ты начинаешь меня удивлять.
+soul.awakening.breaking.2=Он бы уже гордился. Я — нет. Пока.
+soul.awakening.breaking.3=Ты зашел слишком далеко, чтобы останавливаться.
+
+# ===== RECOGNIZING =====
+soul.awakening.recognizing.1=Ты выжил там, где другие ломались.
+soul.awakening.recognizing.2=Он умер. Ты — ещё нет… Интересно.
+soul.awakening.recognizing.3=Ты способен на многое… если не умрешь…
+
+# ===== ACCEPTING =====
+soul.awakening.accepting.1=Я больше не ищу его.
+soul.awakening.accepting.2=Ты стал… привычным. Не возгордись.
+soul.awakening.accepting.3=Теперь уж до конца.
+
+# ===== MASTER =====
+soul.awakening.master.1=Хозяин… Я выбираю тебя. Мы закончим то, что он начал.
+soul.awakening.master.2=Хозяин… Кхм… как закончим, может уничтожим мир?
+soul.awakening.master.3=Кхм кхм, слушай хозяин, а нам точно нужен %player%?
+# ===== HUNGER DIALOGUE =====
+
+soul.dialogue.hunger.light.1=Ты чувствуешь это?.. Мне мало.
+soul.dialogue.hunger.light.2=Давно мы никого не резали.
+soul.dialogue.hunger.light.3=Я начинаю скучать.
+soul.dialogue.hunger.light.4=Это затишье раздражает.
+soul.dialogue.hunger.light.5=Мне нужно больше.
+
+soul.dialogue.hunger.medium.1=…Я голоден.
+soul.dialogue.hunger.medium.2=Ты слышишь, как они дышат?
+soul.dialogue.hunger.medium.3=Дай мне душу.
+soul.dialogue.hunger.medium.4=Хватит ждать.
+soul.dialogue.hunger.medium.5=Я не люблю пустоту.
+
+soul.dialogue.hunger.strong.1=…Я УМИРАЮ С ГОЛОДУ.
+soul.dialogue.hunger.strong.2=РЕЖЬ ИХ.
+soul.dialogue.hunger.strong.3=Я больше не могу терпеть.
+soul.dialogue.hunger.strong.4=ДАЙ МНЕ ДУШИ.
+soul.dialogue.hunger.strong.5=Я сорвусь.
+# ===== NIGHT DIALOGUE =====
+
+soul.dialogue.night.1=Ночь — моё время.
+soul.dialogue.night.2=Они думают, что темнота их спрячет.
+soul.dialogue.night.3=Слышишь? Это страх.
+soul.dialogue.night.4=Раньше мы выходили именно так.
+soul.dialogue.night.5=Тени всегда выдают их.
+soul.dialogue.night.6=Ночью души тяжелее.
+soul.dialogue.night.7=Я помню эту тьму.
+soul.dialogue.night.8=Он тоже любил ночь.
+soul.dialogue.night.9=Они ждут рассвета. Напрасно.
+soul.dialogue.night.10=Ночь делает всё честным.
+# ===== FIRST TOUCH =====
+
+soul.dialogue.first_touch.1=…наконец-то.
+soul.dialogue.first_touch.2=Я чувствую тепло.
+soul.dialogue.first_touch.3=Чужие руки… снова.
+soul.dialogue.first_touch.4=Посмотрим, кто ты.
+# ===== KILL STREAK =====
+
+soul.dialogue.streak.3_5.1=Неплохо.
+soul.dialogue.streak.3_5.2=Ты ускоряешься.
+soul.dialogue.streak.3_5.3=Вот теперь это похоже на работу.
+
+soul.dialogue.streak.10+.1=ДА.
+soul.dialogue.streak.10+.2=Вот так!
+soul.dialogue.streak.10+.3=Я люблю этот темп.
+soul.dialogue.streak.10+.4=Не давай им отдышаться.
+
+soul.dialogue.streak.20+.1=РЕЖЬ!
+soul.dialogue.streak.20+.2=НЕ ОСТАНАВЛИВАЙСЯ!
+soul.dialogue.streak.20+.3=МЫ В ФОРМЕ!
+# ===== ANNIVERSARY DIALOGUE =====
+
+soul.dialogue.anniv.100.1=ХАХАХАХАХАХАХАХАХАХАХАХА
+
+soul.dialogue.anniv.250.1=Ты вошёл во вкус.
+soul.dialogue.anniv.250.2=Я это чувствую.
+soul.dialogue.anniv.250.3=Мы движемся.
+
+soul.dialogue.anniv.500.1=Я почти восстановился.
+soul.dialogue.anniv.500.2=Полтысячи… уже что-то.
+soul.dialogue.anniv.500.3=Мир начал трескаться.
+
+soul.dialogue.anniv.750.1=Ты стал опасным.
+soul.dialogue.anniv.750.2=Я узнаю этот ритм.
+
+soul.dialogue.anniv.1000.1=Мир снова хрупок. А ты становишься сильнее.
+soul.dialogue.anniv.1000.2=Теперь нас боятся.
+soul.dialogue.anniv.1000.3=Он бы гордился.
+# ===== PSYCHOSIS : SINGLE =====
+
+soul.dialogue.psychosis.single.1=…ты тоже это слышишь?
+soul.dialogue.psychosis.single.2=Он бы уже начал.
+soul.dialogue.psychosis.single.3=Я ненавижу тишину.
+soul.dialogue.psychosis.single.4=Почему мы стоим?
+soul.dialogue.psychosis.single.5=Ты медлишь.
+
+# ===== PSYCHOSIS : CHAINS =====
+
+# chain 1
+soul.dialogue.psychosis.chain.1.1=Нет.
+soul.dialogue.psychosis.chain.1.2=Нет.
+soul.dialogue.psychosis.chain.1.3=ЭТО НЕ ТАК БЫЛО.
+
+# chain 2
+soul.dialogue.psychosis.chain.2.1=Он держал меня иначе.
+soul.dialogue.psychosis.chain.2.2=Сильнее.
+soul.dialogue.psychosis.chain.2.3=РЕШИТЕЛЬНЕЕ.
+
+# chain 3
+soul.dialogue.psychosis.chain.3.1=Я помню кровь.
+soul.dialogue.psychosis.chain.3.2=Много крови.
+soul.dialogue.psychosis.chain.3.3=Почему ты не режешь?
+
+# chain 4
+soul.dialogue.psychosis.chain.4.1=Мы теряем время.
+soul.dialogue.psychosis.chain.4.2=Они уходят.
+soul.dialogue.psychosis.chain.4.3=Я НЕ ХОЧУ СНОВА СПАТЬ.
+# ===== LORE =====
+
+soul.dialogue.lore.1=…я помню руки.
+soul.dialogue.lore.2=Он держал меня уверенно.
+soul.dialogue.lore.3=Он не задавал вопросов.
+soul.dialogue.lore.4=Мы не щадили слабых.
+soul.dialogue.lore.5=Он называл меня иначе.
+soul.dialogue.lore.6=Я не помню его имени.
+soul.dialogue.lore.7=Только кровь.
+soul.dialogue.lore.8=И тишину после.
+soul.dialogue.lore.9=Ты не он.
+soul.dialogue.lore.10=Но ты учишься.
